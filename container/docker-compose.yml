@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+   node:
+        build: . 
+        ports:
+           - "${NODE_PORT_MAPPING}:5173"
+        working_dir: "/home/node/app"
+        volumes:
+           - ${PROJECTFOLDER}:/home/node/app
+           - ${ENTRYPOINT}:/docker-entrypoint/entry-point.sh
+        stdin_open: true
+networks:
+    backend:
+        name: ${COMPOSE_PROJECT_NAME}_backend
