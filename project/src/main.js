@@ -15,11 +15,16 @@ const vuetify = createVuetify({
   directives,
 })
 
+//axios
+import axios from 'axios'
+import vueAxios from 'vue-axios'
 
 const app = createApp(App)
 
 app.use(router)
 
 app.use(vuetify)
+
+app.use(vueAxios, axios)
 
 app.mount('#app')
