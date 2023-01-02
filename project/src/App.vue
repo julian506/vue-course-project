@@ -29,7 +29,6 @@ export default {
   methods: {
     addUser(e) {
       this.users.push(e);
-      console.log(this.users);
     },
   },
 };
