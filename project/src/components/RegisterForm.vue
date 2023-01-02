@@ -26,7 +26,7 @@
                       <v-text-field
                         variant="outlined"
                         label="Nombre"
-                        v-model="nombre"
+                    v-model="name"
                       ></v-text-field>
                     </v-col>
                   </v-row>
@@ -36,7 +36,7 @@
                         variant="outlined"
                         label="Correo"
                         type="email"
-                        v-model="correo"
+                    v-model="email"
                       ></v-text-field>
                     </v-col>
                   </v-row>
@@ -46,7 +46,7 @@
                         variant="outlined"
                         label="Edad"
                         type="number"
-                        v-model="edad"
+                    v-model="age"
                       ></v-text-field>
                     </v-col>
                   </v-row>
@@ -56,7 +56,7 @@
                         label="Estado civil"
                         :items="['Soltero/a', 'Casado/a', 'Viudo/a']"
                         variant="outlined"
-                        v-model="estadoCivil"
+                    v-model="maritalStatus"
                       ></v-select>
                     </v-col>
                   </v-row>
@@ -66,7 +66,7 @@
                         variant="outlined"
                         label="Pasatiempo"
                         type="text"
-                        v-model="pasatiempo"
+                    v-model="hobby"
                       ></v-text-field>
                     </v-col>
                   </v-row>
@@ -96,11 +96,12 @@ export default {
   name: "App",
   data() {
     return {
-      nombre: null,
-      correo: null,
-      edad: null,
-      estadoCivil: null,
-      pasatiempo: null,
+      name: null,
+      email: null,
+      age: null,
+      maritalStatus: null,
+      hobby: null,
+      users: [],
     };
   },
 };
